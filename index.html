@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mitski Studios - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Hero ampliado */
+    .hero {
+      padding: 180px 2rem 100px;
+      background: linear-gradient(135deg, #7a42f4cc, #3d1a98cc), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') no-repeat center/cover;
+      color: white;
+      text-align: center;
+      border-radius: 12px;
+      max-width: 900px;
+      margin: 5rem auto 4rem;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+      backdrop-filter: saturate(180%) blur(10px);
+    }
+    .hero h1 {
+      font-size: 3.8rem;
+      font-weight: 900;
+      margin-bottom: 0.4rem;
+      text-shadow: 0 3px 12px rgba(0,0,0,0.7);
+    }
+    .hero p {
+      font-size: 1.5rem;
+      max-width: 700px;
+      margin: 0 auto 2.2rem;
+      line-height: 1.6;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+    }
+    .btn-primary {
+      background: #a36eff;
+      color: white;
+      border: none;
+      padding: 1.1rem 3rem;
+      font-weight: 800;
+      font-size: 1.2rem;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 6px 18px #9f69ffcc;
+      transition: background-color 0.3s ease;
+    }
+    .btn-primary:hover {
+      background: #7a42f4;
+      box-shadow: 0 8px 24px #7a42f4cc;
+    }
+
+    /* Seção Destaques */
+    .highlights {
+      max-width: 900px;
+      margin: 0 auto 5rem;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+      gap: 1.8rem;
+      text-align: center;
+    }
+    .highlight-card {
+      background-color: #1f1f1f;
+      border-radius: 15px;
+      padding: 2rem 1rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+      color: var(--dark-text);
+      transition: transform 0.3s ease;
+      cursor: default;
+    }
+    body.light .highlight-card {
+      background-color: #fafafa;
+      color: var(--light-text);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    }
+    .highlight-card:hover {
+      transform: translateY(-8px);
+    }
+    .highlight-icon {
+      font-size: 48px;
+      margin-bottom: 1rem;
+      color: var(--purple);
+    }
+    .highlight-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+      color: var(--purple);
+    }
+    .highlight-desc {
+      font-size: 1rem;
+      color: inherit;
+      line-height: 1.5;
+    }
+
+    /* Seção Portfólio em destaque */
+    .featured-portfolio {
+      max-width: 900px;
+      margin: 0 auto 5rem;
+      padding: 0 1rem;
+    }
+    .featured-portfolio h2 {
+      text-align: center;
+      font-size: 2.4rem;
+      color: var(--purple);
+      margin-bottom: 2rem;
+    }
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+      gap: 1.5rem;
+    }
+    .portfolio-item {
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    body.light .portfolio-item {
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+    .portfolio-item:hover {
+      transform: scale(1.05);
+    }
+    .portfolio-item img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      aspect-ratio: 4 / 3;
+      border-radius: 14px;
+    }
+
+    /* Footer aprimorado */
+    footer {
+      background-color: var(--dark-bg);
+      border-top: 1px solid #333;
+      padding: 2rem 2rem 3rem;
+      text-align: center;
+      color: var(--dark-text);
+    }
+    body.light footer {
+      background-color: var(--light-bg);
+      color: var(--light-text);
+      border-color: #ddd;
+    }
+    footer img {
+      height: 40px;
+      margin-bottom: 12px;
+    }
+    footer small {
+      display: block;
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      color: #999;
+    }
+
+    /* Responsividade */
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 2.8rem;
+      }
+      .hero p {
+        font-size: 1.1rem;
+      }
+      .btn-primary {
+        padding: 0.9rem 2.5rem;
+        font-size: 1rem;
+      }
+      .highlight-card {
+        padding: 1.5rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="https://media.discordapp.net/attachments/1390067282788749493/1395282900810731710/Mitski_Studios.png?ex=688da876&is=688c56f6&hm=d6e1a7956c209dc06d179ecfe97b480de18efabb36d027d6fc243ef99572eb96&=&format=webp&quality=lossless" alt="Mitski Studios Logo" class="logo" />
+  <nav>
+    <a href="index.html" aria-current="page">Início</a>
+    <a href="portfolio.html">Portfólio</a>
+    <a href="servicos.html">Serviços</a>
+    <a href="contato.html">Contato</a>
+    <button class="toggle-btn" id="toggleTheme" aria-label="Alternar modo claro/escuro">Light Mode</button>
+  </nav>
+</header>
+
+<section class="hero" role="banner">
+  <h1>Mitski Studios</h1>
+  <p>Transformando ideias em experiências visuais marcantes desde 16 de março de 2025.</p>
+  <button class="btn-primary" onclick="window.location.href='portfolio.html'">Ver Projetos</button>
+</section>
+
+<section class="highlights" aria-label="Destaques dos Serviços">
+  <div class="highlight-card" tabindex="0">
+    <div class="highlight-icon">🎨</div>
+    <div class="highlight-title">Design de Logo</div>
+    <div class="highlight-desc">Criações únicas para sua marca ganhar identidade e destaque.</div>
+  </div>
+  <div class="highlight-card" tabindex="0">
+    <div class="highlight-icon">🖼️</div>
+    <div class="highlight-title">Banners Profissionais</div>
+    <div class="highlight-desc">Comunicação visual eficaz para redes sociais e eventos.</div>
+  </div>
+  <div class="highlight-card" tabindex="0">
+    <div class="highlight-icon">📹</div>
+    <div class="highlight-title">Youtube Pack</div>
+    <div class="highlight-desc">Pacotes personalizados para seu canal crescer com estilo.</div>
+  </div>
+</section>
+
+<section class="featured-portfolio" aria-label="Portfólio em destaque">
+  <h2>Portfólio em Destaque</h2>
+  <div class="portfolio-grid">
+    <div class="portfolio-item" tabindex="0">
+      <img src="https://media.discordapp.net/attachments/1390067282788749493/1395279540053479486/EstanciaGaucha.png?ex=688da555&is=688c53d5&hm=a8b94e5213ea78f2b3b82de3b28d3da50cacef4378ffa0a4bbffb0573cc31f7f&=&format=webp&quality=lossless" alt="Projeto Estancia Gaucha" />
+    </div>
+    <div class="portfolio-item" tabindex="0">
+      <img src="https://media.discordapp.net/attachments/1390067282788749493/1395278941849124896/image.png?ex=688da4c6&is=688c5346&hm=0ad26afd17344eded89fa92a47ef0d701305571d1814b74531106d57a0445e52&=&format=webp&quality=lossless&width=477&height=594" alt="Projeto Design Social Media" />
+    </div>
+    <div class="portfolio-item" tabindex="0">
+      <img src="https://media.discordapp.net/attachments/1390067282788749493/1395278276574052383/VsComunnity.png?ex=688da428&is=688c52a8&hm=cfef368758b7206a8db6c44f4cd55e4b7eb2653a6e89cf5db720ab80eb980451&=&format=webp&quality=lossless&width=698&height=698" alt="Projeto VsComunnity" />
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="banner-footer">
+    <img src="https://cdn.discordapp.com/attachments/1392695384102666280/1392721616894431252/standard_4.gif?ex=688d9194&is=688c4014&hm=d73451d20243b77b73f679ebe3899bc008e0d5949588e2be66ce2b67f48025f7&" alt="Banner" />
+  </div>
+
+  <small>© 2025 Mitski Studios - Todos os direitos reservados</small>
+</footer>
+
+<script src="theme-toggle.js"></script>
+</body>
+</html>
