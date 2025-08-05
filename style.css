@@ -159,21 +159,24 @@ body.light .pricing-list li {
   transform: scale(1.05);
 }
 
-/* Footer */
 footer {
   background-color: var(--dark-bg);
-  border-top: 1px solid #333;
-  padding: 2rem;
+  padding: 2rem 0;
   text-align: center;
 }
 
-footer small {
-  display: block;
-  margin-top: 1rem;
-  color: #999;
+footer .banner-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
 }
 
-body.light footer {
-  background-color: var(--light-bg);
-  color: var(--light-text);
+footer .banner-footer img {
+  max-width: 90%;   /* aumenta até quase a largura total */
+  width: auto;
+  height: auto;
+  display: block;
 }
+
+
